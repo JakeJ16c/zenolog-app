@@ -3,16 +3,16 @@
 
 <aside class="zen-sidebar">
   <nav class="nav-menu">
-    <button class="nav-item" title="Fitness Center">
+    <button class="nav-item active" title="Fitness Center" aria-label="Fitness Center">
       <i class="fas fa-dumbbell"></i>
     </button>
-    <button class="nav-item" title="Trading Center">
+    <button class="nav-item" title="Trading Center" aria-label="Trading Center">
       <i class="fas fa-chart-line"></i>
     </button>
-    <button class="nav-item" title="Settings">
+    <button class="nav-item" title="Settings" aria-label="Settings">
       <i class="fas fa-cog"></i>
     </button>
-    <button class="nav-item" title="Account">
+    <button class="nav-item" title="Account" aria-label="Account">
       <i class="fas fa-user-circle"></i>
     </button>
   </nav>
@@ -55,14 +55,28 @@
     cursor: pointer;
   }
 
+  .nav-item i {
+    transition: transform 0.2s ease;
+  }
+
   .nav-item:hover {
     background-color: #3f3f4f;
     transform: scale(1.05);
     color: #fff;
   }
 
+  .nav-item:hover i {
+    transform: scale(1.2);
+  }
+
   .nav-item:focus {
     outline: none;
     box-shadow: 0 0 0 2px #6e9cff;
+  }
+
+  .nav-item.active {
+    background-color: #005b41;
+    color: white;
+    transform: scale(1.1);
   }
 </style>
