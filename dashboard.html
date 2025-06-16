@@ -23,37 +23,6 @@
       height: 100vh;
     }
 
-    .sidebar {
-      width: 60px;
-      background: var(--panel-dark);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 1rem;
-      transition: width 0.3s ease;
-    }
-
-    .sidebar:hover {
-      width: 200px;
-      align-items: flex-start;
-      padding-left: 1rem;
-    }
-
-    .sidebar a {
-      text-decoration: none;
-      color: var(--text-light);
-      margin: 1rem 0;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    .sidebar a:hover {
-      color: var(--accent);
-    }
-
     .main-content {
       flex: 1;
       padding: 2rem;
@@ -75,12 +44,9 @@
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <a href="#"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
-    <a href="#"><i class="fas fa-dumbbell"></i><span>Mind & Body</span></a>
-    <a href="#"><i class="fas fa-coins"></i><span>Finance & Trading</span></a>
-    <a href="#"><i class="fas fa-user"></i><span>Account</span></a>
-  </div>
+  
+  <div id="sidebar-container"></div>
+  
   <div class="main-content">
     <div class="card">
       <h2>Welcome back to Zenolog</h2>
@@ -98,5 +64,8 @@
       </ul>
     </div>
   </div>
+
+<script src="js/load-layout.js"></script>
+  
 </body>
 </html>
