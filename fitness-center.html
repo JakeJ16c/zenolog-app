@@ -7,140 +7,150 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    background-color: #12121A;
-    color: #E0E0E0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #12121A;
+  color: #E0E0E0;
+}
 
-  .fitness-container {
-    margin-left: 80px; /* account for sidebar */
-    padding: 2rem;
-    min-height: 100vh;
-  }
+.fitness-container {
+  margin-left: 80px;
+  padding: 2rem;
+  min-height: 100vh;
+}
 
-  .fitness-header {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #ffffff;
-  }
+.fitness-header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
 
-  .fitness-section {
-    background-color: #1E1E2A;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
+.fitness-section {
+  background-color: #1F1F29;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-  .fitness-section h2 {
-    font-size: 1.3rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-  }
+.fitness-section h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
 
-  .fitness-section p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #CCCCCC;
-  }
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
 
-  .tracker-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-  }
+.tracker-card {
+  background-color: #2A2A3B;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #f1f1f1;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
 
-  .tracker-card {
-    background-color: #2A2A3B;
-    padding: 1rem;
-    border-radius: 10px;
-    color: #f1f1f1;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease;
-  }
+.tracker-card:hover {
+  transform: scale(1.02);
+  background-color: #353545;
+}
 
-  .tracker-card:hover {
-    transform: scale(1.02);
-    background-color: #353545;
-  }
+.tracker-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
 
-  .tracker-card h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
+.tracker-card span {
+  font-size: 0.95rem;
+  color: #bbb;
+}
 
-  .tracker-card span {
-    font-size: 0.85rem;
-    color: #aaa;
-  }
+.log-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
 
-  .btn {
-    display: inline-block;
-    background-color: #6E9CFF;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.6rem 1.2rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-  }
+.log-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
 
-  .btn:hover {
-    background-color: #517bde;
-  }
+.log-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #6E9CFF;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #527bdd;
+}
 
 </style>
   
 </head>
 <body>
-  <!-- Sidebar layout loaded dynamically -->
-  <div id="sidebar-container"></div>
+  <div class="fitness-container">
+    <h1 class="fitness-header">Fitness Center</h1>
 
-  <main class="fitness-main">
-    <h1>Fitness Center</h1>
-
-    <section class="fitness-overview">
+    <section class="fitness-section">
       <h2>Today's Overview</h2>
-      <div class="fitness-cards">
-        <div class="card">
+      <div class="tracker-grid">
+        <div class="tracker-card">
           <h3>Calories Consumed</h3>
-          <p>1,420 kcal</p>
+          <span>1,420 kcal</span>
         </div>
-        <div class="card">
+        <div class="tracker-card">
+          <h3>Protein Intake</h3>
+          <span>110g / 150g</span>
+        </div>
+        <div class="tracker-card">
           <h3>Water Intake</h3>
-          <p>2.8 L</p>
+          <span>2.5L / 3.0L</span>
         </div>
-        <div class="card">
-          <h3>Workout</h3>
-          <p>Back + Triceps</p>
+        <div class="tracker-card">
+          <h3>Steps</h3>
+          <span>7,400 / 10,000</span>
         </div>
       </div>
     </section>
 
-    <section class="fitness-log">
+    <section class="fitness-section">
       <h2>Nutrition Log</h2>
-      <ul>
-        <li>Breakfast: Oats w/ Milk - 320 kcal</li>
-        <li>Snack: Grenade Bar - 220 kcal</li>
-        <li>Lunch: Chicken + Rice - 480 kcal</li>
-        <li>Dinner: Salmon + Veg - 400 kcal</li>
+      <ul class="log-list">
+        <li><strong>Breakfast:</strong> Oats w/ Milk - 320 kcal</li>
+        <li><strong>Snack:</strong> Grenade Bar - 220 kcal</li>
+        <li><strong>Lunch:</strong> Chicken + Rice - 480 kcal</li>
+        <li><strong>Dinner:</strong> Salmon + Veg - 400 kcal</li>
       </ul>
+      <div class="log-buttons">
+        <button class="btn"><i class="fas fa-dumbbell"></i> Add Workout</button>
+        <button class="btn"><i class="fas fa-tint"></i> Log Water</button>
+      </div>
     </section>
-
-    <section class="fitness-buttons">
-      <button class="action-btn"><i class="fas fa-apple-alt"></i> Add Meal</button>
-      <button class="action-btn"><i class="fas fa-dumbbell"></i> Add Workout</button>
-      <button class="action-btn"><i class="fas fa-glass-water"></i> Log Water</button>
-    </section>
-  </main>
+  </div>
 
   <script src="js/load-layout.js"></script>
   
