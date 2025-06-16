@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Center | Zenolog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles/fitness.css" />
+</head>
+<body>
+  <!-- Sidebar layout loaded dynamically -->
+  <div id="sidebar-container"></div>
+
+  <main class="fitness-main">
+    <h1>Fitness Center</h1>
+
+    <section class="fitness-overview">
+      <h2>Today's Overview</h2>
+      <div class="fitness-cards">
+        <div class="card">
+          <h3>Calories Consumed</h3>
+          <p>1,420 kcal</p>
+        </div>
+        <div class="card">
+          <h3>Water Intake</h3>
+          <p>2.8 L</p>
+        </div>
+        <div class="card">
+          <h3>Workout</h3>
+          <p>Back + Triceps</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fitness-log">
+      <h2>Nutrition Log</h2>
+      <ul>
+        <li>Breakfast: Oats w/ Milk - 320 kcal</li>
+        <li>Snack: Grenade Bar - 220 kcal</li>
+        <li>Lunch: Chicken + Rice - 480 kcal</li>
+        <li>Dinner: Salmon + Veg - 400 kcal</li>
+      </ul>
+    </section>
+
+    <section class="fitness-buttons">
+      <button class="action-btn"><i class="fas fa-apple-alt"></i> Add Meal</button>
+      <button class="action-btn"><i class="fas fa-dumbbell"></i> Add Workout</button>
+      <button class="action-btn"><i class="fas fa-glass-water"></i> Log Water</button>
+    </section>
+  </main>
+
+  <script src="layout/load-layout.js" type="module"></script>
+</body>
+</html>
