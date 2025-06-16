@@ -4,121 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zenolog - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Nunito Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
       display: flex;
-      min-height: 100vh;
-      background: #f5f7fa;
+      height: 100vh;
+      background: #f6f9fc;
     }
 
     .sidebar {
-      width: 220px;
-      background-color: #fff;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.05);
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+      width: 60px;
+      background-color: #ffffff;
+      border-right: 1px solid #ddd;
+      transition: width 0.3s ease;
+      overflow: hidden;
+      position: relative;
     }
 
-    .sidebar h2 {
+    .sidebar:hover {
+      width: 200px;
+    }
+
+    .sidebar .menu-toggle {
+      padding: 1rem;
+      text-align: center;
       font-size: 1.2rem;
-      color: #333;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      background: #e5e8f0;
+      cursor: pointer;
     }
 
-    .sidebar nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      display: block;
-      transition: 0.2s;
+    .sidebar ul {
+      list-style: none;
+      padding: 1rem 0;
     }
 
-    .sidebar nav a:hover {
-      color: #204ECF;
+    .sidebar ul li {
+      padding: 1rem;
+      white-space: nowrap;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #f0f3f9;
     }
 
     .main-content {
       flex: 1;
-      padding: 3rem;
+      padding: 2rem;
     }
 
     .hero {
-      background: linear-gradient(to right, #e0ecff, #f3f7ff);
-      padding: 3rem;
-      border-radius: 16px;
-      margin-bottom: 3rem;
+      background: linear-gradient(to right, #e4edff, #f3f7fd);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
     }
 
     .hero h1 {
-      font-size: 2rem;
-      color: #222;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero p {
-      font-size: 1rem;
-      color: #555;
-      max-width: 600px;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
     }
 
     .features {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
 
     .feature-card {
-      background: white;
+      background: #ffffff;
       padding: 1.5rem;
       border-radius: 12px;
       flex: 1;
       min-width: 250px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .feature-card h3 {
-      font-size: 1.1rem;
       margin-bottom: 0.5rem;
-      color: #333;
-    }
-
-    .feature-card p {
-      font-size: 0.95rem;
-      color: #555;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
-  <aside class="sidebar">
-    <h2>Menu</h2>
-    <nav>
-      <a href="#">Dashboard</a>
-      <a href="#">Daily Intentions</a>
-      <a href="#">Mood Log</a>
-      <a href="#">Progress</a>
-      <a href="#">Settings</a>
-    </nav>
-  </aside>
+  <div class="sidebar">
+    <div class="menu-toggle">☰</div>
+    <ul>
+      <li>Dashboard</li>
+      <li>Daily Intentions</li>
+      <li>Mood Log</li>
+      <li>Progress</li>
+      <li>Settings</li>
+    </ul>
+  </div>
 
-  <main class="main-content">
-    <section class="hero">
+  <div class="main-content">
+    <div class="hero">
       <h1>Your Journey to Calm Productivity</h1>
       <p>Track your goals, manage habits, and stay grounded with mindful insights tailored to your life.</p>
-    </section>
+    </div>
 
-    <section class="features">
+    <div class="features">
       <div class="feature-card">
         <h3>Track Daily Intentions</h3>
         <p>Set and review your intentions to stay focused with clarity each day.</p>
@@ -131,7 +125,7 @@
         <h3>Visualise Your Progress</h3>
         <p>Insightful graphs and timelines to help you see how far you’ve come.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 </body>
 </html>
