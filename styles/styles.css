@@ -1,0 +1,14 @@
+:root {
+  --black: #0F0F0F;
+  --navy: #232D3F;
+  --teal-dark: #005B41;
+  --teal-light: #008170;
+  --text-light: #EAEAEA;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--black);
+  color: var(--text-light);
+  display: flex;
+}
